@@ -1,0 +1,13 @@
+
+    .my-alert{
+        width: 50%;
+        margin:auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .panel .sm-square{
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+    }

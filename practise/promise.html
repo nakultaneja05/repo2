@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- asynchronous mein code execution happen simultaneously
+    upar likha code executes and neeche wala code also executes.neeche wala doesnt wait for upar wala to complete-->
+    <script>
+      //promises
+      //3 states of promise=pending state , resolved and rejected
+      //making promise
+      // let work=true;
+      // let a=new Promise((res,rej) => {
+      //     if(work) res("work is done")
+      //     else rej("work is not done")
+      //  });
+      //  console.log(a);
+
+      //a is a promise
+      //promise has 2 paramters
+      //then and catch
+      //then captures everything in resolve
+      //catch captures everything in reject
+      // a.then((res) =>console.log(res)).catch((rej) => console.log(rej));
+      //res and rej are variables.name could be anything.
+
+      //  setTimeout(() => {
+      //     console.log("hello world");
+      //  },3000);
+      //settimeout is to introduce delay in miliseconds and perform the function once after delay
+
+      //  setInterval(() => {
+      //     console.log("hi");
+      //   },1000);
+      //setinterval keeps repeating with mentioned delay
+      //setinterval settimeout are asynchronous
+      let work = true;
+      console.log("first");
+      function isdone() {
+        return new Promise((res, rej) => {
+          setTimeout(() => {
+            if (work) res("work is done");
+            else rej("work is not done");
+          }, 3000);
+        });
+      }
+      // console.log(isdone());
+      // isdone().then((res) =>console.log(res)).catch((rej) =>console.log(rej))
+      async function print() {
+        let result = await isdone();
+        console.log(result);
+      }
+      print();
+      console.log("last");
+      console.log("hi");
+    </script>
+  </body>
+</html>

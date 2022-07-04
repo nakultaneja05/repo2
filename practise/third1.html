@@ -1,0 +1,38 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .parent {
+      display: flex;
+      border: 5px;
+      border-color: black;
+      height: 600 px;
+      padding: 30px;
+      /* justify-content: center; */
+      /* justify-content: space-between;  */
+      align-items: center;
+      justify-content: space-evenly;
+    }
+    .child {
+      display: flex;
+      background-color: orange;
+      height: 200px;
+      width: 200px;
+      align-items: center;
+      justify-content: center;
+      /* flex-grow: 1; */
+      flex-shrink: 0;
+    }
+  </style>
+  <body>
+    <div class="parent">
+      <div class="child"> A </div>
+      <div class="child"> B </div>
+      <div class="child"> C </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .parent {
+      border: 2px;
+      border-color: black;
+      display: flex;
+      height: 600px;
+      /* justify-content:end (to move along main axis);
+        justify-content:start;
+        justify-content:center;
+        justify-content:space-evenly;
+        justify-content:space-around; */
+      justify-content: space-between;
+      /* align items to move along cross axis */
+      align-items: center;
+      gap: 2px;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+    .child {
+      height: 200px;
+      width: 200px;
+      background-color: aqua;
+      /* flex grow :1; */
+      flex-shrink: 0;
+      /* display: flex; */
+      align-items: center;
+      justify-content: center;
+    }
+    .a {
+      flex-grow: 1;
+    }
+    .b {
+      flex-grow: 2;
+      align-self: start;
+    }
+    .c {
+      flex-grow: 3;
+      align-self: center;
+    }
+  </style>
+  <body>
+    <div class="parent">
+      <!-- <div class="child"></div>   .child -->
+      <div class="child">A</div>
+      <div class="child">B</div>
+      <div class="child b">C</div>
+      <div class="child c">D</div>
+    </div>
+  </body>
+</html>

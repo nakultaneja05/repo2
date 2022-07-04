@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .no-support-message {
+        display: none;
+      }
+      .square {
+        width: 40%;
+        aspect-ratio: 4 / 3;
+        background-color: rgb(227, 133, 152);
+        margin: auto;
+      }
+
+      /* Extra small devices (phones, 600px and down) */
+      @media only screen and (max-width: 600px) {
+        .square button {
+          margin: 20px;
+          height: 100px;
+          width: 200px;
+        }
+        .square {
+          background-color: brown;
+          width: 100%;
+        }
+        .square h1 {
+          font-size: 100px;
+        }
+      }
+      @media only screen and (max-width: 800px) and (orientation: landscape) {
+        * {
+          display: none;
+        }
+        .no-support-message {
+          display: block !important;
+          text-align: center;
+        }
+      }
+
+      /* Small devices (portrait tablets and large phones, 600px and up) */
+      @media only screen and (min-width: 600px) and (max-width: 767px) {
+        .square {
+          background-color: green;
+        }
+      }
+
+      /* Medium devices (landscape tablets, 768px and up) */
+      @media only screen and (min-width: 768px) and (max-width: 992px) {
+        .square {
+          background-color: blue;
+        }
+      }
+
+      /* Large devices (laptops/desktops, 992px and up) */
+      @media only screen and (min-width: 992px) and( orientation: potrait) {
+        .square {
+          aspect-ratio: 9/ 16;
+        }
+      }
+
+      /* Extra large devices (large laptops and desktops, 1200px and up) */
+      @media only screen and (min-width: 1200px) {
+      }
+    </style>
+  </head>
+  <body>
+    <div class="square">
+      <h1>Hello</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus ex
+        deserunt eius. Debitis nobis quidem voluptate sequi quibusdam blanditiis
+        unde veniam quas eveniet ipsum. Pariatur vel illo doloribus saepe, nemo
+        tempore porro voluptatum enim eveniet. Tempora voluptatibus obcaecati
+        ipsa sint similique magni ullam, quo quaerat voluptate itaque tempore
+        in! Officiis.
+      </p>
+      <button>Submit</button><button>Reset</button><button>Start</button
+      ><button>Stop</button>
+    </div>
+    <h2 class="no-support-message">we don't support landscape mode</h2>
+  </body>
+</html>

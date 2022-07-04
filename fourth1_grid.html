@@ -1,0 +1,63 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        display: grid;
+        border: 1px solid black;
+        height: 80vh;
+        grid-template:1fr 2fr 1fr/1fr 2fr 1fr;
+        grid-template-areas: 
+            "a a b"
+            "c d b"
+            "c e e";
+        /* gap:2px; */    
+        /* gap to introduce gaps bw matrixes */
+        /* justify-content: center;
+        align-content: center; */
+        /* this is to bring photo inside grid in center */
+        /* place-content: center; */
+        /* this is to place grid at center in the parent box */
+        /* justify-items: center;
+        align-items: center;  this works on grids */
+    }
+    .parent .child
+    {
+        /* height: 50px;
+        width: 50px; */
+        background: url("https://picsum.photos/600/300");
+        background-repeat: no-repeat;
+        /* when image is bigger than cell size it continues itself into other cell */
+        background-size: cover;
+        border: 1px solid black;
+    }
+    .child:nth-child(1){
+        grid-area: a;
+    }
+    .child:nth-child(2){
+        grid-area: b;
+    }    
+    .child:nth-child(3){
+        grid-area: c;
+    }
+    .child:nth-child(4){
+        grid-area: d;
+    }
+    .child:nth-child(5){
+        grid-area: e;
+    }   
+</style>
+<body>
+    <div class="parent">
+        <div class="child">A</div>
+        <div class="child">B</div>
+        <div class="child">C</div>
+        <div class="child">D</div>
+        <div class="child">E</div>
+    </div>
+</body>
+</html>

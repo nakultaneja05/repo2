@@ -1,0 +1,67 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .square {
+      background-color: aqua;
+      font-family: cursive;
+      height: 70vh;
+      margin: auto;
+    }
+
+    @media screen and (max-width: 600px) {
+      .square {
+        background-color: blueviolet;
+        font-family: "Times New Roman", Times, serif;
+        height: 80vh;
+        margin: auto;
+      }
+
+      .square:hover {
+        background-color: black;
+      }
+    }
+
+    @media screen and (min-width: 900px) {
+      .square {
+        background-color: bisque;
+      }
+
+      .square button {
+        gap: 10px;
+        height: 80px;
+        aspect-ratio: 1/1;
+      }
+    }
+
+    @media screen and (min-width: 900px) and (max-width: 1200px){
+        *{
+            display: none;
+        }
+    }
+  </style>
+  <body>
+    <div class="square">
+      <h1>hello world</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis iure
+        perferendis amet nemo, fugiat animi deserunt nam natus beatae ut earum
+        eum ducimus maxime cum a eius dolore rem dignissimos vel quisquam qui
+        sunt voluptatum labore. Tenetur deserunt inventore ea saepe nisi numquam
+        dignissimos sunt non. Quisquam numquam quis consectetur quam iure,
+        tenetur voluptate alias corrupti at ab aut labore nisi accusamus magnam
+        cupiditate nemo quaerat praesentium illo voluptatem doloremque libero
+        nobis soluta modi! Accusamus facere odit cumque necessitatibus at quas
+        atque quo nostrum quasi vitae reprehenderit quis veritatis, architecto
+        inventore iusto, earum, aliquam ipsam ipsum? Perferendis dolorum
+        similique cum!
+      </p>
+      <button>Google</button>
+      <button>Facebook</button>
+    </div>
+  </body>
+</html>

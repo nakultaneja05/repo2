@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .parent{
+        border: 1px solid black;
+        height: 100vh;
+        display: grid;
+        /* grid-template: 0.5fr 3fr 0.5fr/1fr 3fr; */
+        grid-template: 0.5fr 1fr 1fr 00.5fr/1fr 1fr 1fr;
+        /* grid-template-areas: 
+        "a a"
+        "b c"
+        "d d"
+        ; */
+        justify-content: center;
+        align-content: center;
+    }
+    .parent :nth-child(1){
+        background-color:aliceblue;
+    }
+    .parent :nth-child(2){
+        background-color:rgb(176, 248, 221);
+    }
+    .parent :nth-child(3){
+        background-color:beige;
+    }
+    .parent :nth-child(4){
+        background-color:blanchedalmond;
+    }
+    .child{
+        /* background: url("./istockphoto-1316145932-170667a.jpg");
+        background-size: cover;
+        background-repeat: no-repeat; */
+        border: 2px solid black;
+    }
+    /* .child:nth-child(1){
+        grid-area: a;
+    }
+    .child:nth-child(2){
+        grid-area: b;
+    }
+    .child:nth-child(3){
+        grid-area: c;
+    }
+    .child:nth-child(4){
+        grid-area: d;
+    } */
+
+    .child:nth-child(1){
+        grid-column: 1/4;
+    }
+    .child:nth-child(2){
+        grid-row: 2/4;
+    }
+    .child:nth-child(3){
+        grid-row: 2/4;
+        grid-column: 2/4;
+    }
+    .child:nth-child(4){
+        grid-column:1/4;
+    }                  
+</style>
+<body>
+    <div class="parent">
+        <div class="child">A</div>
+        <div class="child">B</div>
+        <div class="child">C</div>
+        <div class="child">D</div>
+    </div>
+</body>
+</html>
